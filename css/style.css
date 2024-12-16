@@ -101,3 +101,34 @@ body {
     opacity: 1;
 }
 
+/* Button below "In California" */
+.grid-button {
+    margin-top: 30px; /* Add more space below "In California" */
+    padding: 20px 40px; /* Increase padding for a larger button */
+    font-size: 28px; /* Increase font size for better visibility */
+    font-weight: bold; /* Make text bold */
+    background-color: #FF5733; /* Use a bright orange for attention */
+    color: white; /* White text for contrast */
+    border: none;
+    border-radius: 15px; /* Round corners for a modern look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button hover effects */
+.grid-button:hover {
+    background-color: #C63D21; /* Slightly darker orange on hover */
+    transform: translateY(-5px); /* Raise the button on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Deepen shadow on hover */
+}
+
+
+/* Button hover effects */
+.grid-button:hover {
+    background-color: #0056b3;
+}
+
+

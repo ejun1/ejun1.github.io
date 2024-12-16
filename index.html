@@ -3,93 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sample File</title>
+    <title>Josef Müller-Brockmann Inspired Poster</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body class="white-background">
-
-    <video autoplay muted loop id="background-video" class="hidden">
-        <source src="css/video1.mov" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <div id="interactive-text" class="centered-text">In California</div>
-
-    <div id="bottom-message" class="bottom-message hidden">
-        A grunge typeface reflects the raw beauty and challenges of California's kelp forests, 
-        symbolizing their resilience amid rising temperatures and pollution. Its rugged texture captures 
-        the urgency and imperfect state of these ecosystems, raising awareness of conservation.
+<body>
+    <div class="poster-container">
+        <div class="grid">
+            <div class="grid-title">Design</div>
+            <div class="grid-subtitle">Principles of Order</div>
+            <div class="grid-item large-text">Josef Müller-Brockmann</div>
+            <div class="grid-item small-text">The Grid System</div>
+            <div class="grid-item circle"></div>
+            <div class="grid-item">
+                <p>Explore the harmony of space, alignment, and modernist design. Let simplicity lead.</p>
+            </div>
+        </div>
     </div>
-
-    <div id="next-message" class="next-message hidden">
-        The overgrowth of kelp, particularly species of brown algae, along the California coast has been 
-        driven by a combination of climate change, rising ocean temperatures, and disrupted marine ecosystems. 
-        This overgrowth can have significant negative impacts on the ecosystem.
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const textElement = document.getElementById("interactive-text");
-            const bottomMessage = document.getElementById("bottom-message");
-            const nextMessage = document.getElementById("next-message");
-            const bodyElement = document.body;
-            const backgroundVideo = document.getElementById("background-video");
-
-            // Bubble effect on hover
-            textElement.addEventListener("mouseover", function () {
-                textElement.classList.add("bubble-effect");
-            });
-
-            textElement.addEventListener("mouseout", function () {
-                textElement.classList.remove("bubble-effect");
-            });
-
-            // First click: Switch to "Kelp grows continuously"
-            textElement.addEventListener("click", function () {
-                if (textElement.textContent === "In California") {
-                    textElement.classList.add("bubble-out");
-
-                    setTimeout(() => {
-                        textElement.textContent = "Kelp grows continuously";
-                        textElement.classList.remove("bubble-out");
-                        textElement.classList.add("fade-in");
-                    }, 1000);
-                } 
-                // Second click: Switch to "It's Now" and show bottom message
-                else if (textElement.textContent === "Kelp grows continuously") {
-                    textElement.classList.add("bubble-out");
-
-                    setTimeout(() => {
-                        textElement.textContent = "It's Now";
-                        textElement.classList.remove("bubble-out");
-                        textElement.classList.add("fade-in");
-
-                        bodyElement.classList.remove("white-background");
-                        bodyElement.classList.add("black-background");
-                        textElement.style.color = "white";
-                        bottomMessage.classList.remove("hidden");
-                        bottomMessage.classList.add("fade-in");
-                    }, 1000);
-                }
-                // Third click: Switch to "Control Our Ocean" and display next message
-                else if (textElement.textContent === "It's Now") {
-                    textElement.classList.add("bubble-out");
-
-                    setTimeout(() => {
-                        textElement.textContent = "Control Our Ocean";
-                        textElement.classList.remove("bubble-out");
-                        textElement.classList.add("fade-in");
-
-                        bottomMessage.classList.add("hidden");
-                        nextMessage.classList.remove("hidden");
-                        nextMessage.classList.add("fade-in");
-
-                        // Play video background
-                        backgroundVideo.classList.remove("hidden");
-                    }, 1000);
-                }
-            });
-        });
-    </script>
 </body>
 </html>
