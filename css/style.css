@@ -1,4 +1,4 @@
-@font-face {
+font-face {
     font-family: "ecosurf";
     src: url("ecosurf.otf") format("opentype");
 }
@@ -130,5 +130,6 @@ body {
 .grid-button:hover {
     background-color: #0056b3;
 }
+
 
 
